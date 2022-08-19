@@ -1,9 +1,4 @@
-
 # **Modern Portfolio Theory**
-
-***for entire pdf report*** [pdf_link](MPT.pdf)
-
-***for notebook*** [notebook_link](ModernPortfolioTheory.ipynb)
 
 ## **Introduction**
 
