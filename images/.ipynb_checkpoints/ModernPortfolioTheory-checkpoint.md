@@ -77,139 +77,17 @@ df.drop(["datetime"], axis=1, inplace=True)
 
 
 ```python
-df.head()
+print(df.head().to_markdown())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AAPL</th>
-      <th>AXP</th>
-      <th>BA</th>
-      <th>GE</th>
-      <th>JNJ</th>
-      <th>JPM</th>
-      <th>KO</th>
-      <th>MCD</th>
-      <th>MSFT</th>
-      <th>VZ</th>
-      <th>WMT</th>
-      <th>XOM</th>
-    </tr>
-    <tr>
-      <th>datetime</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2008-01-02</th>
-      <td>6.95857</td>
-      <td>51.04000</td>
-      <td>86.62000</td>
-      <td>282.76923</td>
-      <td>65.91000</td>
-      <td>42.17000</td>
-      <td>30.54500</td>
-      <td>58.10000</td>
-      <td>35.22000</td>
-      <td>40.33855</td>
-      <td>46.90000</td>
-      <td>93.51000</td>
-    </tr>
-    <tr>
-      <th>2008-01-03</th>
-      <td>6.96179</td>
-      <td>50.41000</td>
-      <td>86.98000</td>
-      <td>283.07693</td>
-      <td>65.93000</td>
-      <td>41.88000</td>
-      <td>30.86500</td>
-      <td>57.93000</td>
-      <td>35.37000</td>
-      <td>40.52526</td>
-      <td>46.38000</td>
-      <td>93.83000</td>
-    </tr>
-    <tr>
-      <th>2008-01-04</th>
-      <td>6.43036</td>
-      <td>49.14000</td>
-      <td>85.82000</td>
-      <td>277.23077</td>
-      <td>65.84000</td>
-      <td>40.93000</td>
-      <td>30.92500</td>
-      <td>57.05000</td>
-      <td>34.38000</td>
-      <td>39.76908</td>
-      <td>45.72000</td>
-      <td>92.08000</td>
-    </tr>
-    <tr>
-      <th>2008-01-07</th>
-      <td>6.34429</td>
-      <td>49.36000</td>
-      <td>82.87000</td>
-      <td>278.30768</td>
-      <td>66.86000</td>
-      <td>41.34000</td>
-      <td>31.65500</td>
-      <td>58.03000</td>
-      <td>34.61000</td>
-      <td>40.46924</td>
-      <td>46.56000</td>
-      <td>91.22000</td>
-    </tr>
-    <tr>
-      <th>2008-01-08</th>
-      <td>6.11607</td>
-      <td>47.95000</td>
-      <td>79.91000</td>
-      <td>272.30768</td>
-      <td>66.94000</td>
-      <td>39.70000</td>
-      <td>31.78500</td>
-      <td>57.08000</td>
-      <td>33.45000</td>
-      <td>39.19962</td>
-      <td>45.97000</td>
-      <td>90.05000</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+    
+|datetime|AAPL |AXP|BA |GE |JNJ |JPM |KO |MCD |MSFT | VZ |WMT |XOM |
+|:-------|--------:|------:|------:|--------:|------:|------:|-------:|------:|-------:|--------:|------:|------:|
+| 2008-01-02 00:00:00 | 6.95857 | 51.04 | 86.62 | 282.769 | 65.91 | 42.17 | 30.545 | 58.1  |  35.22 | 40.3385 | 46.9| 93.51 |
+| 2008-01-03 00:00:00 | 6.96179 | 50.41 | 86.98 | 283.077 | 65.93 | 41.88 | 30.865 | 57.93 |  35.37 | 40.5253 | 46.38 | 93.83 |
+| 2008-01-04 00:00:00 | 6.43036 | 49.14 | 85.82 | 277.231 | 65.84 | 40.93 | 30.925 | 57.05 |  34.38 | 39.7691 | 45.72 | 92.08 |
+| 2008-01-07 00:00:00 | 6.34429 | 49.36 | 82.87 | 278.308 | 66.86 | 41.34 | 31.655 | 58.03 |  34.61 | 40.4692 | 46.56 | 91.22 |
+| 2008-01-08 00:00:00 | 6.11607 | 47.95 | 79.91 | 272.308 | 66.94 | 39.7  | 31.785 | 57.08 |  33.45 | 39.1996 | 45.97 | 90.05 |
 
 
 
@@ -367,64 +245,12 @@ plt.tight_layout()
 
 
 ```python
-pd.DataFrame(df.mean(), columns=["MeanReturn"]).T
+print(pd.DataFrame(df.mean(), columns=["MeanReturn"]).T.to_markdown())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AAPL</th>
-      <th>AXP</th>
-      <th>BA</th>
-      <th>GE</th>
-      <th>JNJ</th>
-      <th>JPM</th>
-      <th>KO</th>
-      <th>MCD</th>
-      <th>MSFT</th>
-      <th>VZ</th>
-      <th>WMT</th>
-      <th>XOM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>MeanReturn</th>
-      <td>0.091086</td>
-      <td>0.056556</td>
-      <td>0.065166</td>
-      <td>-0.00972</td>
-      <td>0.035211</td>
-      <td>0.074478</td>
-      <td>0.022987</td>
-      <td>0.050029</td>
-      <td>0.050554</td>
-      <td>0.020278</td>
-      <td>0.037171</td>
-      <td>0.007425</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| |AAPL |       AXP |        BA |          GE |       JNJ |       JPM |        KO |       MCD |      MSFT |        VZ |       WMT |        XOM |
+|:------|-----:|-----:|----------:|------------:|----------:|----------:|----------:|----------:|----------:|----------:|----------:|-----------:|
+|MeanReturn | 0.0910855 | 0.0565557 | 0.0651659 | -0.00971978 | 0.0352106 | 0.0744775 | 0.0229866 | 0.0500293 | 0.0505538 | 0.0202781 | 0.0371706 | 0.00742542 |
 
 
 
@@ -467,64 +293,12 @@ with standard deviation of 1.0321% while JPM is the most risky asset with standa
 
 
 ```python
-pd.DataFrame(df.std(), columns=["SD"]).T
+print(pd.DataFrame(df.std(), columns=["SD"]).T.to_markdown())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AAPL</th>
-      <th>AXP</th>
-      <th>BA</th>
-      <th>GE</th>
-      <th>JNJ</th>
-      <th>JPM</th>
-      <th>KO</th>
-      <th>MCD</th>
-      <th>MSFT</th>
-      <th>VZ</th>
-      <th>WMT</th>
-      <th>XOM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>SD</th>
-      <td>1.963429</td>
-      <td>2.460442</td>
-      <td>1.817686</td>
-      <td>1.996712</td>
-      <td>1.037305</td>
-      <td>2.756387</td>
-      <td>1.171051</td>
-      <td>1.17366</td>
-      <td>1.752709</td>
-      <td>1.380439</td>
-      <td>1.233441</td>
-      <td>1.543052</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+| |AAPL |     AXP |      BA |      GE |     JNJ |     JPM |      KO |     MCD |    MSFT |      VZ |     WMT |     XOM |
+|:---|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|--------:|
+| SD | 1.96343 | 2.46044 | 1.81769 | 1.99671 | 1.03731 | 2.75639 | 1.17105 | 1.17366 | 1.75271 | 1.38044 | 1.23344 | 1.54305 |
 
 
 
@@ -631,64 +405,12 @@ sacrificing the return. The `larger` the `sharpe ratio` the `better` it is for p
 
 
 ```python
-pd.DataFrame(df.mean()/df.std(), columns=["Sharpe Ratio"]).T
+print(pd.DataFrame(df.mean()/df.std(), columns=["Sharpe Ratio"]).T.to_markdown())
 ```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AAPL</th>
-      <th>AXP</th>
-      <th>BA</th>
-      <th>GE</th>
-      <th>JNJ</th>
-      <th>JPM</th>
-      <th>KO</th>
-      <th>MCD</th>
-      <th>MSFT</th>
-      <th>VZ</th>
-      <th>WMT</th>
-      <th>XOM</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Sharpe Ratio</th>
-      <td>0.046391</td>
-      <td>0.022986</td>
-      <td>0.035851</td>
-      <td>-0.004868</td>
-      <td>0.033944</td>
-      <td>0.02702</td>
-      <td>0.019629</td>
-      <td>0.042627</td>
-      <td>0.028843</td>
-      <td>0.01469</td>
-      <td>0.030136</td>
-      <td>0.004812</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+ ||      AAPL |      AXP |       BA |          GE |       JNJ |     JPM |       KO |       MCD |      MSFT |        VZ |       WMT |        XOM |
+ |:------|----:|-----:|---------:|------------:|----------:|--------:|---------:|----------:|----------:|----------:|----------:|-----------:|
+| Sharpe Ratio | 0.0463911 | 0.022986 | 0.035851 | -0.00486789 | 0.0339443 | 0.02702 | 0.019629 | 0.0426267 | 0.0288432 | 0.0146896 | 0.0301357 | 0.00481216 |
 
 
 
