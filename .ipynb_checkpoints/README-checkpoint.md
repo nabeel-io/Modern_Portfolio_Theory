@@ -158,11 +158,11 @@ $$r_{asset} = \frac{P_t - P_{t-1}}{P_{t-1}}\times100$$
 
 *where*
 
-$P_t$ is present value of adjusted close price of individual stock
+ $P_t$ *is present value of adjusted close price of individual stock*
 
-$P_{t-1}$ is previous day adjusted close price of individual stock
+ $P_{t-1}$ *is previous day adjusted close price of individual stock*
 
-$r_{asset}$ daily return on assest
+ $r_{asset}$ *daily return on assest*
 
 
 ```python
