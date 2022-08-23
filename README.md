@@ -395,7 +395,7 @@ plt.tight_layout()
 *Sharpe ratio give insight to the investor what he is getting as a return on a security for the unit amount of risk he is taking. 
 Sharpe ratio is calculated using* 
 
-$\color{red}{Sharpe Ratio} = \frac{R_{asset}-R_f}{\sigma_{assest}}$
+${Sharpe Ratio} = \frac{R_{asset}-R_f}{\sigma_{assest}}$
 
 where 
 $R_{asset}$ return on asset
