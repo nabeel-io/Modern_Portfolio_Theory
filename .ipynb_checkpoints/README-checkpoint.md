@@ -281,13 +281,12 @@ a potential investment.There are several statistical methods use to measure fina
 
 $$sd_{asset} = \sqrt{\frac{\sum_(x_i - \mu)^2}{N}}$$
 
-where
 
-$N$ is the total number of daily returns observed,
+ $N$ is the total number of daily returns observed,
 
-$x_i$ is daily observed return,
+ $x_i$ is daily observed return,
 
-$\mu$ is mean return observed during N days.
+ $\mu$ is mean return observed during N days.
 
 *The `greater` the Standard Deviation of the security the `more risky` the asset is (in relative terms). The
 Standard Deviation calculates the `historical volatility` of the security, greater the `dispersion` from the
@@ -397,12 +396,11 @@ Sharpe ratio is calculated using*
 
 $${Sharpe Ratio} = \frac{R_{asset}-R_f}{\sigma_{assest}}$$
 
-where 
-$R_{asset}$ return on asset
+ $R_{asset}$ return on asset
 
-$R_f$ risk free rate
+ $R_f$ risk free rate
 
-$\sigma_{asset}$ SD of asset
+ $\sigma_{asset}$ SD of asset
 
 *Modern Portfolio theory sttes that adding assets to a portfolio that have `low` correlation can `decrease` portfolio `risk` without
 sacrificing the return. The `larger` the `sharpe ratio` the `better` it is for portfolio*
